@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fish Classification Result</title>
+</head>
+<body>
+    <h1>This Fish Is A</h1>
+
+    <p><strong>Prediction:</strong> {{ prediction }}</p>
+
+    <h2>Your Image</h2>
+    <img src="{{ url_for('static', filename='uploads/' + uploaded_filename) }}" 
+         alt="Uploaded Image" width="300">
+
+    <h2>Fish Species</h2>
+    <img src="{{ official_image }}" 
+         alt="Official Image of {{ prediction }}" width="300">
+
+    <br><br>
+    <a href="{{ url_for('index') }}">Upload Another Image</a>
+</body>
+</html>
